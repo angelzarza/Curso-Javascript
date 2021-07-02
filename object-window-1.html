@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OBJETO WINDOW - redimensionar</title>
+  </head>
+  <body>
+    <script src="js/object-window-1.js"></script>
+
+    <p align="center"><b> INTRODUCE EL ANCHO Y EL ALTO DE LA VENTANA:</b></p>
+    <center>
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td bgcolor="#FFFF96">
+            <form name="FORMULARIO">
+              <p>
+                <b>ancho de la ventana:</b
+                ><input type="text" name="ancho" size="10" />
+              </p>
+              <p>
+                <b>alto de la ventana:</b
+                ><input type="text" name="alto" size="10" />
+              </p>
+              <input
+                type="button"
+                value="Crear Ventana"
+                name="B1"
+                onclick="CrearVentana()"
+              />
+              <input
+                type="button"
+                value="Cerrar Ventana"
+                name="B2"
+                onclick="CerrarVentana()"
+              />
+            </form>
+          </td>
+        </tr>
+      </table>
+    </center>
+
+    <p align="center">
+      <b>
+        INTRODUCE las coordenadas x e y para mover o redimensionar la
+        ventana:</b
+      >
+    </p>
+    <center>
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td bgcolor="#FFFF96">
+            <form name="FORMULARIO">
+              <p>
+                <b>Coordenada X:</b><input type="text" name="X" size="10" />
+              </p>
+              <p>
+                <b>Coordenada Y:</b><input type="text" name="Y" size="10" />
+              </p>
+              <input
+                type="button"
+                value="mover ventana"
+                name="B1"
+                onclick="MoverVentana()"
+              />
+              <input
+                type="button"
+                value="Redimensionar"
+                name="B2"
+                onclick="Redimensionar()"
+              />
+            </form>
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>

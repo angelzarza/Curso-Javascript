@@ -1,0 +1,43 @@
+<!-- Dentro del código de un evento, JavaScript crea automáticamente la va-
+riable this, que hace referencia al elemento XHTML que ha provocado el
+evento. -->
+
+<!-- Firefox almacena el valor black (solo en caso de que los cuatro
+bordes coincidan en color), Internet Explorer lo almacena como black black
+black black y Opera almacena su representación hexadecimal #000000. -->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta
+      http-equiv="Content-Type"
+      content="text/html;
+      charset=iso-8859-1"
+    />
+    <title>UD3 Eventos</title>
+    <script type="text/javascript">
+      function resalta(elemento) {
+        switch (elemento.style.borderColor) {
+            case 'silver':
+            case 'silver silver silver silver':
+            case '#c0c0c0':
+                elemento.style.borderColor = 'black';
+                break;
+            case 'black':
+            case 'black black black black':
+            case '#000000':
+                elemento.style.borderColor = 'silver';
+                break;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      style="width: 150px; height: 60px; border: thin solid silver"
+      onmouseover="resalta(this)"
+      onmouseout="resalta(this)"
+    >
+      Sección de contenidos...
+    </div>
+  </body>
+</html>

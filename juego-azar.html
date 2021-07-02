@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>EV7-UD1</title>
+    <script type="text/javascript">
+        var oculto=0;
+        var intentos=1;
+        var N=0;
+        oculto=Math.floor(Math.random()* 11); //genera un numero entre 0 y 10
+        while(intentos<6)
+        {
+            N = parseInt(prompt("Introduce un numero entre 0 y 10 : ", 0));
+            if (N==oculto)
+            {
+                alert("<<ENHORABUENA HAS ADIVINADO EL NUMERO>>" + oculto + "!!!");
+                break;
+            }
+            else
+            {
+                if (N>oculto) 
+                {
+                    alert("<<INTRODUCE UN NUMERO MENOR>>");
+                }
+                else
+                {
+                    alert("<<INTRODUCE UN NUMERO MAYOR>>");
+                }
+                document.write("<BR><B>NUMERO TECLEADO: "+ N +  ", INTENTO: " + intentos + "</B>");
+                intentos ++;
+            if (intentos==6)
+            alert("<<<LO SIENTO HAS PERDIDO>>>");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Ejercicio Voluntario 7. Unidad 1</p>
+</body>
+</html>
