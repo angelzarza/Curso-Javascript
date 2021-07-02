@@ -1,3 +1,5 @@
+// Script para pruebas de codigo, asociado a (test.html)
+
 var valor1 = 5;
 var valor2 = 2;
 var valor3;
