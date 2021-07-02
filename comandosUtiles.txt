@@ -1,0 +1,180 @@
+------------------
+COMANDOS PROYECTO
+------------------
+
+// Instalamos las dependecias necesarias descritas en (package.json) que es la carpeta (node_modules).
+# npm i
+
+-------------
+COMANDOS GIT
+-------------
+
+CONFIGURACIÓN INICIAL
+----------------------
+
+// Comando para instalar Git
+# apt-get install git
+
+// Comando para configurar nuestro nombre
+# git config --global user.name "Nombre"
+
+// Comando para configurar nuestro email
+# git config --global user.email "Email"
+
+// Comando para configurar los colores de Git
+# git config --global color.ui true
+
+
+CONFIGURACIÓN PROYECTO
+-----------------------
+
+// Marca el inicio de nuestro proyecto y comienza a monitorear todos nuestros cambios
+# git init
+
+// Estado de nuestro proyecto
+# git status
+
+// Decidimos que archivos estan listos para el siguiente paso, podemos usar -A para añadir todos.
+# git add
+
+// Guardar los cambios con un mensaje para identificarlos
+# git commit -m "Mensaje"
+
+// Nos da una lista de todos los commits
+# git log
+
+// Viajamos entre commits o ramas
+# git checkout CodigoDelCommit o NombreRama
+# git checkout -d NombreRama // Crea la rama y te mueves a ella
+
+// Elimina los commits
+# git reset CodigoDelCommit
+# git reset --soft CodigoDelCommit // No toca nuestro codigo
+# git reset -- mixed CodigoDelCommit // Borra el Staging Area sin tocar el Working Area
+# git reset --hard CodigoDelCommit // Borra absolutamente todo
+
+// Muestra comandos de Git
+# git help
+
+// Muestra las ramas
+# git branch
+# git branch nombre // Crea una rama
+# git branch -d nombre // Borra una rama
+# git branch -a // Muestra ramas ocultas
+
+// Fusionar ramas
+# git merge Rama
+# git merge origin/master // Fusionar rama oculta con la principal
+
+// Bajar archivos de nuestro repositorio remoto a origin/master (Rama oculta que no sirve de intermediaria).
+# git fetch origin
+
+
+----------------
+COMANDOS GITHUB
+----------------
+
+// Descarga un proyecto de GitHub y lo pasa al ordenador.
+# git clone urlDelRepositorio
+
+// Vincula nuestro proyecto local, con nuestro proyecto remoto.
+# git remote add origin urlDelRepositorio
+
+// Elimina la conexion entre repositorio local y repositorio remoto
+# git remote remove origin
+# git remote -v // Estado de la conexion
+
+// Pasa nuestros cambios, commits y proyecto a GitHub
+# git push
+# git push origin rama // Con (origin rama) subimos la rama al GitHub
+
+
+------------------
+UTILIDADES GITHUB
+------------------
+
+ISSUES
+-------
+
+// Son una forma de continuar, mejorar o solucionar un error en nuestros 
+// repositorios (proyectos).
+// Son mensajes para ver que hace falta en nuestro proyecto para poder solucionarlo.
+
+MILESTONES
+-----------
+
+// Son grupos de issues que se aplican para un proyecto, caracteristica o periodo de tiempo.
+// Se puede asignar fecha para los issues y desde issues agregarlos a milestones creados.
+
+LABELS
+-------
+
+// Son una manera de organizar diferentes tipos de problemas.
+// En issues podemos añadir estas etiquetas que creemos.
+
+TAGS
+-----
+
+// Los tags son simples puntos especificos el la historia de nuestro proyecto y se
+// usan para marcar alguna version del mismo.
+//
+// Las tags anotadas son almacedanas como objetos completos dentro de la base de Git
+// y contienen mas informacion.
+# git tag -a v1.0 -m "Mensaje"
+# git tag v1.0 // Tags simples
+# git tag -a v1.0 -m "Mensaje" CodigoDelCommit // Asignar tags a un commit
+
+// Para subir nuestros tags a GitHub
+# git push origin v1.0
+# git push origin --tags // Sube todos los tags.
+
+
+----------------
+WORKFLOWS GITHUB
+----------------
+
+ORGANIZATION
+-------------
+
+// Para trabajar en equipo se debe crear una nueva organizacion (Create an organization).
+// Podemos tranferir un repositorio personal en sus opciones con (Transfer).
+
+TRABAJAR CON TERCEROS
+----------------------
+
+// Con Fork hacemos una copia de un repositorio que no somos dueños en nuestro repositorio.
+// Esto nos creara una rama oculta mas llamada (upstream/master).
+// Despues de hacer cualquier cambio en el repositorio local, con un pull request le decimos al 
+// dueño del repositorio original que arreglamos un error de su proyecto.
+
+
+------------------
+DEPLOYMENT GITHUB
+------------------
+
+LLAVES SSH
+-----------
+
+// Nos sirve para conectarnos facilmente a un servidor o servidores, sin tener que poner una
+// contraseña a cada momento.
+
+// Creamos una llave
+# ssh-keygen
+
+// En la configuracion del perfil tenemos el apartado (SSH Keys), para saber que llave tenemos
+// que copiar debemos buscar el archivo (id_rsa.pub) que se creo con el comando anterior y
+// abrirlo con el siguiente comando.
+# cat id_rsa.pub
+
+GIT HOOKS
+----------
+
+// Mecanismos para activar scripts, cuando suceden ciertas acciones. Tenemos mas de 17 Git Hooks.
+// Vamos a usar un ejemplo de uso.
+
+// Al ejecutar el (git commit) se ejecutara el Hook.
+# git commit -m "Mensaje"
+# comandos ...
+
+// Debemos crear los Hooks en una carpeta, con sus nombres predeterminados y editar su codigo para
+// que haga lo que nosotros queramos.
