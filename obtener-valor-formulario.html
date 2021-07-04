@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Formularios</title>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="texto" />
+      <textarea id="parrafo"></textarea>
+    </div>
+
+    <!-- Radiobutton -->
+    <div>
+      <br />
+      <input type="radio" value="si" name="pregunta" id="pregunta_si" />
+      SI
+      <input type="radio" value="no" name="pregunta" id="pregunta_no" />
+      NO
+      <input type="radio" value="nsnc" name="pregunta" id="pregunta_nsnc" />
+      NS/NC
+    </div>
+
+    <!-- Checkbox -->
+    <div>
+      <br />
+      <input
+        type="checkbox"
+        value="condiciones"
+        name="condiciones"
+        id="condiciones"
+      />
+      He leído y acepto las condiciones
+      <input
+        type="checkbox"
+        value="privacidad"
+        name="privacidad"
+        id="privacidad"
+      />
+      He leído la política de privacidad
+    </div>
+
+    <!-- Select -->
+    <div>
+      <br />
+      <select id="opciones" name="opciones">
+        <option value="1">Primer valor</option>
+        <option value="2">Segundo valor</option>
+        <option value="3">Tercer valor</option>
+        <option value="4">Cuarto valor</option>
+      </select>
+    </div>
+
+    <!-- Colocamos la carga del script despues del formulario para que getElements no de null -->
+    <script src="js/obtener-valor-formulario.js"></script>
+  </body>
+</html>
