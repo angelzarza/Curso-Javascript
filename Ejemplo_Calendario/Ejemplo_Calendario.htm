@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ejemplo_Calendario</title>
+    <script src="js/jscal2.js" type="text/javascript"></script>
+    <script src="js/lang/es.js" type="text/javascript"></script>
+    <link href="css/jscal2.css" rel="stylesheet" type="text/css" />
+    <link href="css/border-radius.css" rel="stylesheet" type="text/css" />
+    <link href="css/win2k/win2k.css" rel="stylesheet" type="text/css" />
+    <!--<link href="css/matrix/matrix.css" rel="stylesheet" type="text/css" />
+    <link href="css/steel/steel.css" rel="stylesheet" type="text/css" />-->
+    <script type="text/javascript">
+        window.onload = function () {
+            Calendar.setup({
+                inputField: "Fecha",
+                trigger: "boton",
+                onSelect: function () { this.hide() },
+                showTime: 12,
+                dateFormat: "%d/%m/%Y"
+            });
+        }
+    </script>
+</head>
+<body>
+    <input size="30" id="Fecha" readonly="readonly" />
+    <button id="boton">
+        ...</button><br />
+</body>
+</html>

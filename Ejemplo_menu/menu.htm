@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" class="yui3-loading">
+<head>
+    <meta charset="utf-8">
+    <title>Ejemplo_Menu</title>
+    <script type="text/javascript" src="http://yui.yahooapis.com/3.5.1/build/yui/yui-min.js"></script>
+    <script type="text/javascript">
+
+        //  llamamos al metodo "use", y le pasamos como parametro "node-menunav".  
+        // Esto cargará el script y el CSS para el Plugin del nodo MenuNav 
+        // y todos las dependencias necesarias 
+
+        YUI().use('node-menunav', function (Y) {
+
+
+            // Recuperaramos la instancia de nodo que representa el menú raíz 
+            // ()<div id="menu_horizontal">) y llamamos al método del "plugin" y
+            // le pasamos una referencia al Plugin de NodeMenuNav.</div>
+
+            var menu = Y.one("#menu_horizontal");
+
+            menu.plug(Y.Plugin.NodeMenuNav);
+
+        });
+
+    </script>
+</head>
+<body class="yui3-skin-sam">
+    <h1>
+        Cabecera</h1>
+    <div id="menu_horizontal" class="yui3-menu yui3-menu-horizontal">
+        <div class="yui3-menu-content">
+            <ul class="first-of-type">
+                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="menu.htm">Principal</a></li>
+                <li><a class="yui3-menu-label" href="#menu1">Menu 1</a>
+                    <div id="menu1" class="yui3-menu">
+                        <div class="yui3-menu-content">
+                            <ul>
+                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu1</a></li>
+                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu2</a></li>
+                                <li><a class="yui3-menu-label" href="#SubMenu1_2_1">SubMenu3</a>
+                                    <div id="SubMenu3_1" class="yui3-menu">
+                                        <div class="yui3-menu-content">
+                                            <ul>
+                                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu3_1</a></li>
+                                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu3_2</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu3_3</a></li>
+                                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu3_4</a></li>
+                                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu3_5</a></li>
+                                            </ul>
+                                            <ul>
+                                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu3_6</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu4</a>
+                                </li>
+                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu5</a></li>
+                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu6</a></li>
+                                <li class="yui3-menuitem"><a class="yui3-menuitem-content" href="#menu1">SubMenu7</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
